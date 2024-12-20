@@ -1,0 +1,29 @@
+Maaf masi pemula saya,kalau ada bug bilang ae jir
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+</head>
+<body>
+    <h2>Konversi Suhu dari Celsius ke Fahrenheit</h2>
+    <label for="celsius">Masukkan suhu dalam Celsius:</label>
+    <input type="number" id="celsius" placeholder="Serah lu mw angka berapa ">
+    <button onclick="konversiSuhu()">Konversi</button>
+    <p id="hasil"></p>
+
+    <script>
+        function konversiSuhu() {
+            const celsius = parseFloat(document.getElementById('celsius').value);
+            if (isNaN(celsius)) {
+                document.getElementById('hasil').innerText = "Mohon masukkan angka yang valid.";
+            } else {
+                const fahrenheit = (celsius * 9/5) + 32;
+                document.getElementById('hasil').innerText = `Suhu dalam Fahrenheit: ${fahrenheit.toFixed(2)}`;
+            }
+        }
+    </script>
